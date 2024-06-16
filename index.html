@@ -14,6 +14,13 @@
 
 
     <title>MOODMate</title>
+    <style>
+      .disabled-link {
+        color: grey;
+        pointer-events: none;
+        text-decoration: none;
+      }
+    </style>
 </head>
 <body style="background-color: #ffffff">
     <!-- NavBar -->
@@ -90,8 +97,8 @@
                     <div class="section-left">
                       <div class="section-info-div">
                         <div class="row">
-                          <div class="col-sm-5"><img src="./Images/other/shy-blog.jpg" width="60%"/></div>
-                          <div class="col-sm-7 text-col">The value of "the importance of human relationships" is so much a part of what we as social workers do that it often goes unnoticed, yet it is the foundation upon which everything else is built.d <span style="color: grey; font-size: 12px;">[1]</span style="color: grey; font-size: 12px;"></div>
+                          <div class="col-sm-5"><img src="./Images/other/shy-blog.jpg" style="height: 150px; width: 150px; border-radius: 10px;" width="60%"/></div>
+                          <div class="col-sm-7 text-col">The value of "the importance of human relationships" is so much a part of what we as social workers do that it often goes unnoticed, yet it is the foundation upon which everything else is built.</div>
                         </div>
                       </div>
                       <div class="section-figure " >
@@ -566,7 +573,7 @@
                         <p class="card-text pt-sm-2">Yet to be submitted, link will be updated soon.</p>
                       </div>
                       <ul class="download-items list-group list-group-flush">
-                        <li class="list-group-item">Group<a href="#" target="_blank">Download</a></li>
+                        <li class="list-group-item" >Group<a href="https://drive.google.com/drive/folders/1Udt31N4Ke0VC5c30QmU6vlXenFwcPGuV?usp=drive_link" target="_blank">Download</a></li>
                         <!-- <li class="list-group-item">Individual<a href="">Download</a></li> -->
                       </ul>
 
@@ -634,7 +641,7 @@
                         <p class="card-text pt-sm-2">Yet to be submitted, link will be updated soon.</p>
                       </div>
                       <ul class="download-items list-group list-group-flush">
-                        <li class="list-group-item">Group<a href="#" target="_blank">Download</a></li>
+                        <li class="list-group-item">Group<a href="#" id="download-link">Download</a></li>
                         <li class="list-group-item">Individual<a href="https://drive.google.com/drive/folders/1RT96jP6l2jUPJZ9oi1LD5mTc2OMcfxQC?usp=drive_link" target="_blank">Download</a></li>
                       </ul>
 
@@ -748,7 +755,7 @@
                     <div class="card about-us-card">
                       <img src="./Images/dp/samitha.JPG" class="about-us-image cosupervisor" style="height: 300px" alt="S.P. Vidanaarachchi" height="20%"/>
                       <div class="card-body">
-                        <h5 class="card-title">Mr. Samitha Vidanaarachchi</h5>
+                        <h5 class="card-title">Mr. S.P Vidanaarachchi</h5>
 						</br>
                         <span class="badge badge-secondary">Co-Supervisor</span>
                         <div class="text-group">
@@ -861,7 +868,7 @@
                       </div>
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-						<a class="card-text mr-4" style="cursor: pointer;" href="https://www.linkedin.com/in/tinali-gunasekara-896141179/"><i class="fab fa-linkedin-in mr-2"></i>LinkedIn</a>
+						<a class="card-text mr-4" style="cursor: pointer;" href="#"><i class="fab fa-linkedin-in mr-2"></i>LinkedIn</a>
                           <a class="card-text" style="cursor: pointer;" href="mailto:chanikadilini6@gmail.com"><i class="fas fa-envelope-open-text mr-2"></i></i>E-Mail</a>
                         </li>
                       </ul>
@@ -886,7 +893,7 @@
                       </div>
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-						<a class="card-text mr-4" style="cursor: pointer;" href="linkedin.com/in/gnanod-chathuramadu-379847130"><i class="fab fa-linkedin-in mr-2"></i>LinkedIn</a>
+						<a class="card-text mr-4" style="cursor: pointer;" href="https://www.linkedin.com/in/shakila-dilshan-624a57287/"><i class="fab fa-linkedin-in mr-2"></i>LinkedIn</a>
                           <a class="card-text" style="cursor: pointer;" href="mailto:shakiladnanayakkara@gmail.com"><i class="fas fa-envelope-open-text mr-2"></i></i>E-Mail</a>
                         </li>
                       </ul>
@@ -911,7 +918,7 @@
                       </div>
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-						<a class="card-text mr-4" style="cursor: pointer;" href="https://www.linkedin.com/in/divyani-rajapaksha-06b3a6185"><i class="fab fa-linkedin-in mr-2"></i>LinkedIn</a>
+						<a class="card-text mr-4" style="cursor: pointer;" href="https://www.linkedin.com/in/damidu-thimesha/"><i class="fab fa-linkedin-in mr-2"></i>LinkedIn</a>
                           <a class="card-text" style="cursor: pointer;" href="mailto:damidu2014@gmail.com"><i class="fas fa-envelope-open-text mr-2"></i></i>E-Mail</a>
                         </li>
                       </ul>
@@ -987,5 +994,14 @@
     <script src="./lib/fontawesome/js/all.min.js"></script>
     <script src="./lib/bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+      const link = document.getElementById('download-link');
+      const shouldDisable = true; // Change this condition as needed
+  
+      if (shouldDisable) {
+        link.classList.add('disabled-link');
+        link.onclick = () => false;
+      }
+    </script>
 </body>
 </html>
